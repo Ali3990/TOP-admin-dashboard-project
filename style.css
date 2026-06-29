@@ -1,3 +1,276 @@
-.container{
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
+}
+
+.container {
     display: grid;
+    grid-template-columns: 1fr 3.2fr 1fr;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+
+}
+
+.main {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-rows: auto auto;
+}
+
+.header{
+    grid-column: 2/ -1;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    height: 5rem;
+
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.settings {
+    margin-top: 1rem;
+}
+
+.settings-item {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.settings-item svg,
+.nav-item svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: white;
+    flex-shrink: 0;
+}
+
+.settings-item p,
+.nav-item p {
+    margin: 0.5rem;
+}
+
+
+.search-bar {
+    flex-grow: 1;
+}
+
+.search-bar input {
+    width: 60%;
+    margin-top: 1.25rem;
+    margin-left: 0.3rem;
+    margin-bottom: 1.875rem;
+    border-radius: 50px;
+}
+
+.search-bar img {
+    width: 1.6rem;
+    height: 1.6rem;
+    margin-left: 2.5rem;
+}
+
+.username {
+    margin-right: 3.125rem;
+}
+
+.subheader {
+    display: grid;
+    grid-template-columns: .7fr 5.5fr 3fr;
+    align-items: center;
+    height: 7rem;
+}
+
+.sub-avatar img {
+    height: 7.5rem;
+    width: 7.5rem;
+}
+
+.subheader img {
+    margin-left: 1.875rem;
+}
+
+.greeting p {
+    margin-bottom: 0;
+}
+
+.greeting h3 {
+    margin-top: 0;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+button {
+    appearance: none;
+    border-radius: 1.25rem;
+    padding: 0.375rem 0.9375rem;
+    background-color: rgb(17, 118, 241);
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+
+.notification-icon img {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.avatar img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+}
+
+.dashboard {
+    font-weight: bolder;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.dashboard svg {
+    width: 2.8rem;
+    height: 2.8rem;
+    fill: white;
+    flex-shrink: 0;
+}
+
+.sidebar {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    background-color: rgba(36, 130, 202, 0.908);
+    display: grid;
+    grid-template-rows: auto .4fr 1fr;
+    padding: 1.25rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.projects {
+    grid-column: 2 / 3;
+    grid-row: 2 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(3, 1fr);
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background-color: rgb(226, 224, 224);
+}
+
+.card {
+    border-radius: 0.75rem;
+    padding: 1.6rem;
+    background-color: white;
+    box-shadow: 3px 3px 6px rgb(0,0,0,0.15);
+    border-left: 8px solid orange;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    grid-column: auto;
+    grid-row: 1 / 2;
+    font-size: larger;
+    /* margin-bottom: 20px; */
+}
+
+
+.panels {
+    display: grid;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background-color:  rgb(226, 224, 224);
+}
+
+.announcement-title {
+    margin-top: 2.5rem;
+    margin-bottom: 1.875rem;
+    font-size: larger;
+}
+
+.announcement-panel {
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.trend-group,
+.announcement-group {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    box-shadow: 3px 3px 6px rgb(0,0,0,0.15);
+    margin-right: 20px;
+}
+
+.trend-panel {
+    display: grid;
+    margin-bottom: 1.25rem;
+    box-shadow: 3px 3px 6px rgb(0,0,0,0.15);
+}
+
+.card p,
+.announcement p,
+.trend p {
+    color: rgb(107, 107, 107);
+    margin-top: 0;
+}
+
+.announcement p,
+.trend p {
+    font-size: .8rem;
+}
+
+.card h5,
+.announcement h5,
+.trend h5 {
+    margin-bottom: 0.2rem;
+}
+
+.card h5 {
+    font-size: 1.1rem;
+}
+
+.card p {
+    font-size: 1rem;
+}
+
+.card-icons svg{
+    height: 1.6rem;
+    width: 1.6rem;
+    fill: rgb(50, 50, 50);
+}
+
+.card-icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: auto;
+}
+
+
+.trend h5{
+    font-weight: normal;
+}
+
+.announcement-group > :nth-child(2) {
+    border-top: 1.5px solid rgb(216, 216, 216);
+    border-bottom: 1.5px solid rgb(216, 216, 216);
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
 }
